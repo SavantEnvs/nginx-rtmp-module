@@ -1,0 +1,9 @@
+project: savantenvs/nginx-rtmp-module
+target: rtmp-mp4-vod-fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/rtmp-mp4-vod-fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/rtmp_mp4_vod_fuzzer
+    libfuzzer: true
+    timeout: 3

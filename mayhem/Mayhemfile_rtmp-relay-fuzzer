@@ -1,0 +1,9 @@
+project: savantenvs/nginx-rtmp-module
+target: rtmp-relay-fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/rtmp-relay-fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/rtmp_relay_fuzzer
+    libfuzzer: true
+    timeout: 10

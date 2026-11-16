@@ -1,0 +1,9 @@
+project: savantenvs/nginx-rtmp-module
+target: rtmp-proxy-protocol-fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/rtmp-proxy-protocol-fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/rtmp_proxy_protocol_fuzzer
+    libfuzzer: true
+    timeout: 10
